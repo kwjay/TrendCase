@@ -8,3 +8,6 @@ __pycache__/
 venv/
 env/
 .idea/
+/.env
+/.idea
+/data/
