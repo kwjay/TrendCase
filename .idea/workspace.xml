@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13dcee48-29e4-4ff4-9b53-06ab7696c84d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/market_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plot_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trendcase_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/market_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/market_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

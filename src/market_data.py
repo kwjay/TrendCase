@@ -8,7 +8,7 @@ load_dotenv()
 API_KEY: str | None = os.getenv("ALPHA_API_KEY")
 API_URL = "https://www.alphavantage.co/query"
 
-def fetch_daily(symbol: str, output_size:str ="compact") -> pd.DataFrame:
+def fetch_daily(symbol: str, output_size:str="compact") -> pd.DataFrame:
     if API_KEY is None:
         raise RuntimeError("ALPHA_API_KEY is not set.")
     params = {"function": "TIME_SERIES_DAILY",
@@ -27,22 +27,22 @@ def fetch_daily(symbol: str, output_size:str ="compact") -> pd.DataFrame:
     df["volume"] = df["volume"].astype(int)
     return df
 
-def daily_path(symbol: str, root: str | os.PathLike = "data") -> Path:
+def daily_path(symbol: str, root: str | os.PathLike="data") -> Path:
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
     return root / f"{symbol.upper()}_daily.parquet"
 
-def load_daily(symbol: str, root: str | os.PathLike = "data") -> pd.DataFrame | None:
+def load_daily(symbol: str, root: str | os.PathLike="data") -> pd.DataFrame | None:
     path = daily_path(symbol, root)
     if path.exists():
         return pd.read_parquet(path)
     return None
 
-def save_daily(df: pd.DataFrame, symbol: str, root: str | os.PathLike = "data") -> None:
+def save_daily(df: pd.DataFrame, symbol: str, root: str | os.PathLike="data") -> None:
     path = daily_path(symbol, root)
     df.to_parquet(path, engine="auto", index=True)
 
-def get_daily(symbol: str, root: str | os.PathLike = "data") -> pd.DataFrame:
+def get_daily(symbol: str, root: str | os.PathLike="data") -> pd.DataFrame:
     daily = load_daily(symbol, root)
     if daily is None:
         df = fetch_daily(symbol, "full")
